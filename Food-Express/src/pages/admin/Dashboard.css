@@ -1,0 +1,40 @@
+/* src/pages/admin/Dashboard.css */
+.admin-dashboard {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.admin-dashboard h2 {
+  margin-bottom: 1rem;
+}
+.admin-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.admin-nav button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.admin-nav button:hover {
+  background-color: #0056b3;
+}
+.admin-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.admin-content th,
+.admin-content td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+.admin-content th {
+  background-color: #f2f2f2;
+}
+

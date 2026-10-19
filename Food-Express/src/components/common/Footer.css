@@ -1,0 +1,8 @@
+.footer {
+  flex: 0 0 auto;
+  padding: 20px clamp(18px, 4vw, 64px);
+  background: #252328;
+  color: rgb(255 255 255 / 78%);
+  text-align: center;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,134 @@
+.order-timeline {
+  margin-top: 18px;
+  padding: 17px 18px;
+  border: 1px solid #ebe6e0;
+  border-radius: 13px;
+  background: #fcfbf9;
+}
+
+.order-timeline h4 {
+  margin: 0 0 16px;
+  color: #343039;
+  font-family: var(--sans, Arial, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.order-timeline ol {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.order-timeline ol > li.order-timeline-step {
+  position: relative;
+  display: grid;
+  min-height: 54px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-content: start;
+  column-gap: 14px;
+  margin: 0;
+  padding: 0 0 15px 28px;
+  border: 0;
+  border-bottom: 0;
+  color: #89838a;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.order-timeline-step::before {
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #d5d1cc;
+  border-radius: 50%;
+  background: #fff;
+  content: "";
+}
+
+.order-timeline-step::after {
+  position: absolute;
+  top: 17px;
+  bottom: 0;
+  left: 6px;
+  width: 1px;
+  background: #e3dfda;
+  content: "";
+}
+
+.order-timeline ol > li.order-timeline-step:last-child {
+  min-height: auto;
+  padding-bottom: 0;
+}
+
+.order-timeline-step:last-child::after {
+  display: none;
+}
+
+.order-timeline-step.is-complete {
+  color: #514b53;
+}
+
+.order-timeline-step.is-complete::before {
+  border-color: #438358;
+  background: #438358;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.order-timeline-step.is-complete::after {
+  background: #b9d8bf;
+}
+
+.order-timeline-step.is-current {
+  color: #2f5939;
+}
+
+.order-timeline-step.is-current::before {
+  border-color: #347047;
+  background: #fff;
+  box-shadow: 0 0 0 4px #e6f2e8;
+}
+
+.order-timeline-step.is-current > span:first-child {
+  font-weight: 750;
+}
+
+.order-timeline-step > span:first-child {
+  min-width: 0;
+  font-weight: 600;
+}
+
+.order-timeline-step time,
+.order-timeline-time {
+  color: #858087;
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.order-timeline > p {
+  margin: 0;
+  color: #666;
+  font-size: 0.84rem;
+}
+
+@media (max-width: 520px) {
+  .order-timeline {
+    padding: 14px;
+  }
+
+  .order-timeline ol > li.order-timeline-step {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3px;
+    padding-right: 0;
+  }
+
+  .order-timeline-step time,
+  .order-timeline-time {
+    text-align: left;
+  }
+}

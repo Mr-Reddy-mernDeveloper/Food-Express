@@ -1,0 +1,604 @@
+.delivery-dashboard {
+  width: min(100% - 36px, 1180px);
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 56px) 0 72px;
+  color: #38343b;
+  text-align: left;
+}
+
+.delivery-dashboard-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.delivery-eyebrow {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #965142;
+  font-size: 0.7rem;
+  font-weight: 750;
+  letter-spacing: 0.13em;
+}
+
+.delivery-dashboard-header h1 {
+  margin: 0;
+  color: #28252c;
+  font-family: var(--heading, Georgia, serif);
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.delivery-dashboard-header p {
+  margin: 9px 0 0;
+  color: #77727a;
+  font-size: 0.94rem;
+}
+
+.delivery-online-status {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: 1px solid #d5e8d8;
+  border-radius: 999px;
+  background: #f2faf3;
+  color: #347047;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.delivery-online-status > span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #438358;
+  box-shadow: 0 0 0 4px #e2f1e4;
+}
+
+.delivery-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.delivery-stat-card {
+  display: flex;
+  min-height: 94px;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e9e5df;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgb(36 28 22 / 3%);
+}
+
+.delivery-stat-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 13px;
+  font-size: 1.12rem;
+  font-weight: 750;
+}
+
+.delivery-stat-icon.is-available {
+  background: #f8eeea;
+  color: #a34d3d;
+}
+
+.delivery-stat-icon.is-active {
+  background: #fff3dc;
+  color: #a16a0c;
+}
+
+.delivery-stat-icon.is-completed {
+  background: #eaf5ec;
+  color: #347047;
+}
+
+.delivery-stat-icon.is-earnings {
+  background: #edf1fb;
+  color: #5269a2;
+}
+
+.delivery-stat-card > div {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.delivery-stat-card > div > span {
+  color: #77727a;
+  font-size: 0.78rem;
+}
+
+.delivery-stat-card strong {
+  overflow-wrap: anywhere;
+  color: #29262d;
+  font-size: 1.28rem;
+}
+
+.delivery-section {
+  margin-top: 31px;
+}
+
+.delivery-section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+
+.delivery-section-heading .delivery-eyebrow {
+  margin-bottom: 4px;
+}
+
+.delivery-section-heading h2 {
+  margin: 0;
+  color: #302c33;
+  font-family: var(--sans, Arial, sans-serif);
+  font-size: clamp(1.2rem, 2.6vw, 1.55rem);
+  font-weight: 750;
+}
+
+.delivery-count {
+  padding: 6px 10px;
+  border: 1px solid #e8e3dd;
+  border-radius: 999px;
+  background: #fff;
+  color: #716b72;
+  font-size: 0.75rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.delivery-order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+  gap: 15px;
+}
+
+.delivery-order-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e7e2dc;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 7px 22px rgb(36 28 22 / 4%);
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, transform 0.16s ease;
+}
+
+.delivery-order-card:hover {
+  transform: translateY(-2px);
+  border-color: #d9c8bd;
+  box-shadow: 0 10px 28px rgb(36 28 22 / 7%);
+}
+
+.delivery-order-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.delivery-order-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 12px;
+  background: #f8eee8;
+  color: #984b3d;
+  font-size: 1.2rem;
+  font-weight: 750;
+}
+
+.delivery-order-mark.is-route {
+  background: #edf1fb;
+  color: #5269a2;
+}
+
+.delivery-order-badge {
+  display: inline-flex;
+  min-height: 27px;
+  align-items: center;
+  padding: 0 9px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.delivery-order-badge.is-request {
+  border-color: #f0dfb7;
+  background: #fff7e5;
+  color: #88600e;
+}
+
+.delivery-order-badge.is-waiting {
+  border-color: #f0dfb7;
+  background: #fff7e5;
+  color: #88600e;
+}
+
+.delivery-order-badge.is-on-route {
+  border-color: #d7e0f4;
+  background: #f0f4fc;
+  color: #435a91;
+}
+
+.delivery-order-id {
+  overflow: hidden;
+  margin: 13px 0 4px;
+  color: #89838a;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.delivery-order-card h3 {
+  overflow-wrap: anywhere;
+  margin: 0;
+  color: #302c33;
+  font-family: var(--sans, Arial, sans-serif);
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.delivery-order-facts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 13px;
+  padding: 10px 0;
+  border-top: 1px solid #f0eeeb;
+  border-bottom: 1px solid #f0eeeb;
+  color: #77727a;
+  font-size: 0.79rem;
+}
+
+.delivery-order-facts > span:last-child {
+  color: #302c33;
+  font-weight: 750;
+}
+
+.delivery-earnings-estimate {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 0 0;
+  color: #77727a;
+  font-size: 0.78rem;
+}
+
+.delivery-earnings-estimate strong {
+  color: #347047;
+}
+
+.delivery-order-card .order-details {
+  margin-top: 13px;
+}
+
+.delivery-order-card .order-details summary {
+  color: #8f392f;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.delivery-order-card .order-details-content {
+  padding-top: 12px;
+}
+
+.delivery-order-card .order-details-content > p {
+  margin: 7px 0;
+  color: #5f5961;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.delivery-order-card .order-details-content ul {
+  margin: 8px 0;
+  padding-left: 20px;
+  color: #5f5961;
+  font-size: 0.82rem;
+}
+
+.delivery-order-card .order-details-content li {
+  padding: 4px 0;
+}
+
+.delivery-order-card .order-details-content .order-timeline {
+  margin-top: 12px;
+}
+
+.delivery-route-summary {
+  display: grid;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.delivery-route-summary > div {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.delivery-route-summary > div:first-child::after {
+  position: absolute;
+  top: 14px;
+  bottom: -12px;
+  left: 5px;
+  width: 1px;
+  background: #d9d4cd;
+  content: "";
+}
+
+.route-dot {
+  z-index: 1;
+  width: 11px;
+  height: 11px;
+  flex: 0 0 auto;
+  margin-top: 3px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px #9b806f;
+}
+
+.route-dot.is-pickup {
+  background: #bd775f;
+}
+
+.route-dot.is-dropoff {
+  background: #438358;
+  box-shadow: 0 0 0 1px #5f9a6c;
+}
+
+.delivery-route-summary > div > span:last-child {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+
+.delivery-route-summary small {
+  color: #858087;
+  font-size: 0.7rem;
+}
+
+.delivery-route-summary strong {
+  overflow-wrap: anywhere;
+  color: #514b53;
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.delivery-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.delivery-actions button {
+  min-height: 40px;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: background-color 0.16s ease, transform 0.16s ease;
+}
+
+.delivery-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.delivery-primary-action {
+  flex: 1 1 150px;
+  background: var(--accent, #984b3d);
+  color: #fff;
+}
+
+.delivery-primary-action:hover {
+  background: #842f26;
+}
+
+.delivery-secondary-action {
+  border-color: #e7d7d2 !important;
+  background: #fff;
+  color: #a22b20;
+}
+
+.delivery-secondary-action:hover {
+  background: #fff2ef;
+}
+
+.delivery-empty-state {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 21px;
+  border: 1px dashed #dfd8d0;
+  border-radius: 15px;
+  background:
+    radial-gradient(ellipse at 0 50%, rgb(246 230 215 / 42%), transparent 50%),
+    #fff;
+}
+
+.delivery-empty-state.is-compact {
+  background: #fff;
+}
+
+.delivery-empty-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 13px;
+  background: #f8eee8;
+  color: #984b3d;
+  font-size: 1.35rem;
+}
+
+.delivery-empty-icon.is-success {
+  background: #eaf5ec;
+  color: #347047;
+}
+
+.delivery-empty-state h3 {
+  margin: 0;
+  color: #38343b;
+  font-family: var(--sans, Arial, sans-serif);
+  font-size: 0.92rem;
+  font-weight: 750;
+}
+
+.delivery-empty-state p {
+  margin: 5px 0 0;
+  color: #77727a;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.delivery-completed-list {
+  display: grid;
+  gap: 9px;
+}
+
+.delivery-completed-card {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 15px;
+  border: 1px solid #e9e5df;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.delivery-completed-check {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 10px;
+  background: #eaf5ec;
+  color: #347047;
+  font-weight: 750;
+}
+
+.delivery-completed-card h3 {
+  overflow: hidden;
+  margin: 0;
+  color: #38343b;
+  font-size: 0.84rem;
+  text-overflow: ellipsis;
+}
+
+.delivery-completed-card p {
+  overflow: hidden;
+  margin: 4px 0 0;
+  color: #858087;
+  font-size: 0.73rem;
+  text-overflow: ellipsis;
+}
+
+.delivery-completed-card > strong {
+  color: #347047;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.delivery-completed-status {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: #eef8ef;
+  color: #347047;
+  font-size: 0.68rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.delivery-dashboard .order-details summary:focus-visible,
+.delivery-dashboard .delivery-actions button:focus-visible {
+  outline: 3px solid var(--accent-border, #d7a298);
+  outline-offset: 3px;
+}
+
+@media (max-width: 820px) {
+  .delivery-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .delivery-dashboard {
+    width: min(100% - 28px, 1180px);
+    padding-top: 24px;
+  }
+
+  .delivery-dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .delivery-stat-card {
+    min-height: 78px;
+    gap: 9px;
+    padding: 12px;
+  }
+
+  .delivery-stat-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .delivery-stat-card > div > span {
+    font-size: 0.72rem;
+  }
+
+  .delivery-stat-card strong {
+    font-size: 1.08rem;
+  }
+
+  .delivery-order-card {
+    padding: 16px;
+  }
+
+  .delivery-completed-card {
+    grid-template-columns: 34px minmax(0, 1fr) auto;
+    gap: 9px;
+  }
+
+  .delivery-completed-status {
+    grid-column: 2 / -1;
+    justify-self: start;
+    margin-top: -4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .delivery-order-card,
+  .delivery-actions button {
+    transition: none;
+  }
+}

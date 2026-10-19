@@ -1,0 +1,92 @@
+/* src/components/common/Header.css */
+.header {
+  background-color: #252328;
+  color: #fff;
+  padding: 0 clamp(18px, 4vw, 64px);
+  box-shadow: 0 2px 14px rgb(0 0 0 / 12%);
+}
+.nav {
+  display: flex;
+  width: 100%;
+  min-height: 72px;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.logo {
+  font-size: 1.45rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2.2vw, 30px);
+  margin: 0;
+  padding: 0;
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.18s ease;
+}
+
+.nav-links .nav-restaurants-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-restaurants-link svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.nav-links li a:hover {
+  color: #f1b6a6;
+}
+
+.nav-links button {
+  padding: 9px 15px;
+  border: 1px solid rgb(255 255 255 / 35%);
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.nav-links button:hover {
+  border-color: #fff;
+  background: rgb(255 255 255 / 10%);
+}
+
+@media (max-width: 560px) {
+  .nav {
+    min-height: 64px;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .nav-links li a,
+  .nav-links button {
+    font-size: 0.9rem;
+  }
+}

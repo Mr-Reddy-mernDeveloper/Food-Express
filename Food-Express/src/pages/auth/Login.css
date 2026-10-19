@@ -1,0 +1,383 @@
+.auth-page {
+  width: min(100% - 32px, 480px);
+  margin: clamp(24px, 6vh, 64px) auto;
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 0 14px 40px rgb(36 28 22 / 9%);
+  text-align: left;
+}
+
+.auth-page h2 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.login-page {
+  display: grid;
+  width: min(100% - 40px, 1080px);
+  min-height: min(650px, calc(100svh - 150px));
+  grid-template-columns: minmax(0, 1.03fr) minmax(360px, 0.97fr);
+  align-items: stretch;
+  gap: clamp(24px, 5vw, 68px);
+  margin: clamp(24px, 5vh, 56px) auto;
+  padding: clamp(14px, 2vw, 22px);
+  overflow: hidden;
+  border: 1px solid rgb(232 229 223 / 85%);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgb(36 28 22 / 11%);
+}
+
+.login-welcome {
+  position: relative;
+  display: flex;
+  min-height: 570px;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: clamp(28px, 4vw, 52px);
+  border-radius: 20px;
+  background:
+    radial-gradient(ellipse at 86% 63%, rgb(255 219 174 / 75%), transparent 37%),
+    linear-gradient(145deg, #f2e5d6, #ead5c1 65%, #d9bda3);
+  color: #30251f;
+}
+
+.login-welcome-mark {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgb(121 67 49 / 25%);
+  border-radius: 14px;
+  color: #8e3d30;
+  font-family: var(--heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.login-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  color: #984b3d;
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.15em;
+}
+
+.login-welcome h1 {
+  max-width: 450px;
+  color: #30251f;
+  font-size: clamp(38px, 4vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.login-welcome > div:nth-of-type(1) > p {
+  max-width: 390px;
+  margin-top: 18px;
+  color: #66574e;
+  font-size: 1rem;
+}
+
+.login-food-art {
+  position: absolute;
+  right: -30px;
+  bottom: 75px;
+  display: grid;
+  width: min(47%, 250px);
+  aspect-ratio: 1;
+  place-items: center;
+  border: 1px solid rgb(122 76 52 / 18%);
+  border-radius: 50%;
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0 27px,
+    rgb(122 76 52 / 13%) 28px 29px
+  );
+  opacity: 0.86;
+}
+
+.login-food-art-inner {
+  width: 48%;
+  aspect-ratio: 1;
+  border: 1px solid rgb(122 76 52 / 20%);
+  border-radius: 50%;
+  background: #fff8ee;
+  box-shadow: 0 12px 35px rgb(87 52 34 / 12%);
+}
+
+.login-food-art-spark {
+  position: absolute;
+  color: #a4533c;
+}
+
+.login-food-art-spark-one {
+  top: 12%;
+  left: 10%;
+  font-size: 1.8rem;
+}
+
+.login-food-art-spark-two {
+  right: 11%;
+  bottom: 15%;
+  font-size: 1.4rem;
+}
+
+.login-welcome-caption {
+  position: relative;
+  z-index: 1;
+  color: #624d40;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.login-card {
+  align-self: center;
+  width: min(100%, 410px);
+  margin: 0 auto;
+  padding: clamp(20px, 3vw, 42px) clamp(16px, 3vw, 30px);
+}
+
+.login-card > .login-eyebrow {
+  margin-bottom: 10px;
+}
+
+.login-card h2 {
+  margin: 0;
+  color: var(--text-h);
+  font-family: var(--sans);
+  font-size: clamp(26px, 3vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.login-card-description {
+  margin-top: 8px;
+  color: #77727a;
+  font-size: 0.94rem;
+}
+
+.login-form {
+  margin-top: 30px;
+}
+
+.login-form .form-group {
+  margin-bottom: 20px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #37333a;
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.login-form input,
+.login-form select {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 14px;
+  border: 1px solid #ddd9d3;
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text-h);
+  font: inherit;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.login-form .indian-phone-input {
+  min-height: 50px;
+}
+
+.login-form .indian-phone-input input {
+  min-height: 48px;
+  padding: 12px 14px 12px 8px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.login-form .indian-phone-input input:focus {
+  border: 0;
+  box-shadow: none;
+}
+
+.phone-number-hint {
+  display: block;
+  margin-top: 6px;
+  color: #77727a;
+  font-size: 0.8rem;
+}
+
+.login-form input::placeholder {
+  color: #aaa4ad;
+}
+
+.login-form input:focus,
+.login-form select:focus {
+  border-color: var(--accent);
+  outline: none;
+  box-shadow: 0 0 0 4px var(--accent-bg);
+}
+
+.login-form button {
+  display: flex;
+  width: 100%;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.login-form button:hover {
+  transform: translateY(-1px);
+  background: #842f26;
+}
+
+.login-form button:focus-visible,
+.login-form a:focus-visible {
+  outline: 3px solid var(--accent-border);
+  outline-offset: 3px;
+}
+
+.login-form .login-register-prompt {
+  margin-top: 22px;
+  color: #77727a;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.login-form a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+.login-form .error,
+.login-form .registration-message {
+  margin-bottom: 18px;
+  padding: 11px 13px;
+  border: 1px solid;
+  border-radius: 9px;
+  font-size: 0.9rem;
+}
+
+.login-form .error {
+  border-color: #f0c8c3;
+  background: #fff4f2;
+  color: #a22b20;
+}
+
+.login-form .registration-message {
+  border-color: #c7e5d0;
+  background: #f1faf3;
+  color: #276738;
+}
+
+.restaurant-registration-fields {
+  margin: 0 0 18px;
+  padding: 16px;
+  border: 1px solid #d8d5dd;
+  border-radius: 8px;
+}
+
+.restaurant-registration-fields legend {
+  padding: 0 6px;
+  color: #333;
+  font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .login-page {
+    width: min(100% - 28px, 520px);
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 20px auto 32px;
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .login-welcome {
+    min-height: 260px;
+    padding: 22px 24px;
+  }
+
+  .login-welcome-mark {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+    font-size: 1.35rem;
+  }
+
+  .login-welcome > div:nth-of-type(1) {
+    max-width: 75%;
+    margin-top: 28px;
+  }
+
+  .login-welcome h1 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .login-welcome > div:nth-of-type(1) > p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+  }
+
+  .login-food-art {
+    right: -35px;
+    bottom: 35px;
+    width: 38%;
+  }
+
+  .login-welcome-caption {
+    display: none;
+  }
+
+  .login-card {
+    padding: 28px 18px 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .login-page {
+    width: min(100% - 20px, 520px);
+  }
+
+  .login-welcome {
+    min-height: 240px;
+    padding: 18px;
+  }
+
+  .login-welcome > div:nth-of-type(1) {
+    max-width: 82%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .login-form input,
+  .login-form select,
+  .login-form button {
+    transition: none;
+  }
+}

@@ -1,0 +1,27 @@
+.order-details {
+  margin-top: 12px;
+}
+
+.order-details summary {
+  width: fit-content;
+  color: #07549c;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.order-details summary:hover {
+  text-decoration: underline;
+}
+
+.order-details-hide,
+.order-details[open] .order-details-show {
+  display: none;
+}
+
+.order-details[open] .order-details-hide {
+  display: inline;
+}
+
+.order-details-content {
+  padding-top: 12px;
+}

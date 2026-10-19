@@ -1,0 +1,107 @@
+/* src/pages/customer/Checkout.css */
+.checkout {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+.checkout h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.checkout-form .form-group {
+  margin-bottom: 1rem;
+}
+.checkout-form label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.checkout-field-hint {
+  display: block;
+  margin-top: 5px;
+  color: #666;
+  font-size: 0.82rem;
+}
+.checkout-phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+}
+.checkout-phone-input:focus-within {
+  border-color: var(--accent);
+  outline: 3px solid var(--accent-bg);
+}
+.checkout-phone-input > span {
+  padding: 0 0 0 10px;
+  color: #514b52;
+  font-weight: 650;
+}
+.checkout-form .checkout-phone-input input {
+  min-width: 0;
+  border: 0;
+  outline: 0;
+}
+.checkout-payment-method {
+  margin: 0.35rem 0 0;
+  padding: 10px 12px;
+  border: 1px solid #d6e8d9;
+  border-radius: 8px;
+  background: #f5fbf5;
+  color: #276738;
+  font-weight: 700;
+}
+.checkout-payment-note {
+  display: block;
+  margin-top: 6px;
+  color: #666;
+}
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.checkout-form .actions {
+  margin-top: 1rem;
+  text-align: right;
+}
+.checkout-form .submit-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.checkout-form .error {
+  color: #c00;
+  margin-top: 0.5rem;
+}
+.checkout-form .summary {
+  margin: 1.5rem 0;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  text-align: left;
+}
+.checkout-form .summary p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.checkout-form .summary .summary-total {
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #ccc;
+  font-size: 1.1em;
+}
+.checkout-form .summary small {
+  display: block;
+  margin-top: 0.75rem;
+  color: #666;
+  font-size: 0.85rem;
+}
